@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-260px*5));
+  }
+}
+@keyframes Icon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-215px*20));
+  }
+}
+
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+  width: calc(200px * 10); 
+  animation: scroll 10s  linear infinite;
+}
+
+.slide-icon-track{
+  display: flex;
+  gap: 15px;
+  width: calc(200px * 40); 
+  animation: Icon 30s  linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* Pausa la animación al pasar el mouse */
+}
