@@ -15,7 +15,7 @@ export function sendEmail(e: FormEvent<HTMLFormElement>, formRef: RefObject<HTML
   const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-if (!formRef.current) return;
+  if (!formRef.current) return;
 
   toast.promise(
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey),
